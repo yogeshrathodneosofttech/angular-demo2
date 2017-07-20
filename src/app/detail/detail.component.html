@@ -1,0 +1,20 @@
+<h1>Product Detail</h1>
+
+
+<div class="container" *ngIf="userInfo">
+	<div
+		class="panel panel-default"
+		style="padding: 15px">
+		<h1>Id: {{ userInfo.id }}</h1>
+		<h2>Name: {{ userInfo.name }}</h2>
+		<h3>Username: {{ userInfo.username }}</h3>
+		<h4>Phone: {{ userInfo.phone }}</h4>
+		<h5>Address: {{ userInfo.address.city }}, {{ userInfo.address.street }}, {{ userInfo.address.suite }}, {{ userInfo.address.zipcode }}</h5>
+
+		<a href="javascript:void(0)" class="btn btn-success" (click)="addToCart(userInfo.id)">Add To Cart</a>
+
+	</div>
+
+
+</div>
+
